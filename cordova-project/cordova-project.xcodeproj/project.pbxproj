@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B858B6069E8FF1323DA5FF03 /* libPods-cordova-project.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4509D42BEEBF118D8616631 /* libPods-cordova-project.a */; };
 		BCB6F54C26885FDD004E8045 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB6F54B26885FDD004E8045 /* AppDelegate.m */; };
 		BCB6F55226885FDD004E8045 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB6F55126885FDD004E8045 /* ViewController.m */; };
 		BCB6F55526885FDD004E8045 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCB6F55326885FDD004E8045 /* Main.storyboard */; };
 		BCB6F55726885FE0004E8045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCB6F55626885FE0004E8045 /* Assets.xcassets */; };
 		BCB6F55A26885FE0004E8045 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCB6F55826885FE0004E8045 /* LaunchScreen.storyboard */; };
 		BCB6F55D26885FE0004E8045 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB6F55C26885FE0004E8045 /* main.m */; };
+		BCB6F56B26886D39004E8045 /* MYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB6F56A26886D39004E8045 /* MYWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55BA7C24A38A0680C9EA7836 /* Pods-cordova-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cordova-project.debug.xcconfig"; path = "Target Support Files/Pods-cordova-project/Pods-cordova-project.debug.xcconfig"; sourceTree = "<group>"; };
+		915BAC1AB54CCD6726B23F03 /* Pods-cordova-project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cordova-project.release.xcconfig"; path = "Target Support Files/Pods-cordova-project/Pods-cordova-project.release.xcconfig"; sourceTree = "<group>"; };
 		BCB6F54726885FDD004E8045 /* cordova-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cordova-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCB6F54A26885FDD004E8045 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BCB6F54B26885FDD004E8045 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +30,9 @@
 		BCB6F55926885FE0004E8045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCB6F55B26885FE0004E8045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCB6F55C26885FE0004E8045 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BCB6F56926886D39004E8045 /* MYWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYWebViewController.h; sourceTree = "<group>"; };
+		BCB6F56A26886D39004E8045 /* MYWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYWebViewController.m; sourceTree = "<group>"; };
+		D4509D42BEEBF118D8616631 /* libPods-cordova-project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cordova-project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +40,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B858B6069E8FF1323DA5FF03 /* libPods-cordova-project.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22D5229B162F4B3EDD332734 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55BA7C24A38A0680C9EA7836 /* Pods-cordova-project.debug.xcconfig */,
+				915BAC1AB54CCD6726B23F03 /* Pods-cordova-project.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4FCAEB9338A22908FF34AE48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4509D42BEEBF118D8616631 /* libPods-cordova-project.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BCB6F53E26885FDD004E8045 = {
 			isa = PBXGroup;
 			children = (
 				BCB6F54926885FDD004E8045 /* cordova-project */,
 				BCB6F54826885FDD004E8045 /* Products */,
+				22D5229B162F4B3EDD332734 /* Pods */,
+				4FCAEB9338A22908FF34AE48 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +89,8 @@
 				BCB6F54B26885FDD004E8045 /* AppDelegate.m */,
 				BCB6F55026885FDD004E8045 /* ViewController.h */,
 				BCB6F55126885FDD004E8045 /* ViewController.m */,
+				BCB6F56926886D39004E8045 /* MYWebViewController.h */,
+				BCB6F56A26886D39004E8045 /* MYWebViewController.m */,
 				BCB6F55326885FDD004E8045 /* Main.storyboard */,
 				BCB6F55626885FE0004E8045 /* Assets.xcassets */,
 				BCB6F55826885FE0004E8045 /* LaunchScreen.storyboard */,
@@ -78,6 +107,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCB6F56026885FE0004E8045 /* Build configuration list for PBXNativeTarget "cordova-project" */;
 			buildPhases = (
+				4474EA8FBD07C09EE8583EF2 /* [CP] Check Pods Manifest.lock */,
 				BCB6F54326885FDD004E8045 /* Sources */,
 				BCB6F54426885FDD004E8045 /* Frameworks */,
 				BCB6F54526885FDD004E8045 /* Resources */,
@@ -135,6 +165,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4474EA8FBD07C09EE8583EF2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cordova-project-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BCB6F54326885FDD004E8045 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -143,6 +198,7 @@
 				BCB6F55226885FDD004E8045 /* ViewController.m in Sources */,
 				BCB6F54C26885FDD004E8045 /* AppDelegate.m in Sources */,
 				BCB6F55D26885FE0004E8045 /* main.m in Sources */,
+				BCB6F56B26886D39004E8045 /* MYWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +338,7 @@
 		};
 		BCB6F56126885FE0004E8045 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55BA7C24A38A0680C9EA7836 /* Pods-cordova-project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +358,7 @@
 		};
 		BCB6F56226885FE0004E8045 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 915BAC1AB54CCD6726B23F03 /* Pods-cordova-project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
