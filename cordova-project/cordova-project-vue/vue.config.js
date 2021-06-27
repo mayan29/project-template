@@ -1,5 +1,6 @@
 
 module.exports = {
   publicPath: './',
-  outputDir: '../www'
+  outputDir: '../www',
+  productionSourceMap: false
 }

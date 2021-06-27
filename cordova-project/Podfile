@@ -3,6 +3,7 @@ inhibit_all_warnings!
 
 target 'cordova-project' do
     pod 'Cordova'
+    pod 'CordovaPlugin-camera'
 end
 
 post_install do |installer|

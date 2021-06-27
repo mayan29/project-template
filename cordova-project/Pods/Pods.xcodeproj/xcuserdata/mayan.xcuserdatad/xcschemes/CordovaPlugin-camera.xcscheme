@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2D4BD106DFFA3F977FA81CADB7B29B92"
-               BuildableName = "libCordova.a"
-               BlueprintName = "Cordova"
+               BlueprintIdentifier = "DC3B5C983D6C92B5865FDD81FB1E3992"
+               BuildableName = "libCordovaPlugin-camera.a"
+               BlueprintName = "CordovaPlugin-camera"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

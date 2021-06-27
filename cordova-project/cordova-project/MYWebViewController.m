@@ -17,9 +17,6 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    
-//    self.wwwFolderName = @"www";
-//    self.startPage = @"index.html";
 }
 
 @end

@@ -1,16 +1,21 @@
 PODS:
   - Cordova (5.1.1)
+  - CordovaPlugin-camera (3.0.0):
+    - Cordova (>= 3.0.0)
 
 DEPENDENCIES:
   - Cordova
+  - CordovaPlugin-camera
 
 SPEC REPOS:
   trunk:
     - Cordova
+    - CordovaPlugin-camera
 
 SPEC CHECKSUMS:
   Cordova: 5490a208d8396a5cdbbba24732cb2f8779123f8e
+  CordovaPlugin-camera: 41452b27c3f5b8f66376d5ea88d258ffe3dca496
 
-PODFILE CHECKSUM: 47c822800f11c4dfdfb194dac732436d5045a5ba
+PODFILE CHECKSUM: 654e720a72a798a66223e204ebe7e3df56502afd
 
 COCOAPODS: 1.8.4

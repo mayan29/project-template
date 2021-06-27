@@ -1,18 +1,19 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Vue logo" src="../assets/logo.png" @click="onImgClick">
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
+  methods: {
+    onImgClick () {
+      document.addEventListener("deviceready", onDeviceReady, false)
+      function onDeviceReady() {
+          console.log(navigator.camera)
+      }
+    }
   }
 }
 </script>
