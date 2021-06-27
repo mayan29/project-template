@@ -15,6 +15,8 @@
 		BCB6F55A26885FE0004E8045 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCB6F55826885FE0004E8045 /* LaunchScreen.storyboard */; };
 		BCB6F55D26885FE0004E8045 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB6F55C26885FE0004E8045 /* main.m */; };
 		BCB6F56B26886D39004E8045 /* MYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB6F56A26886D39004E8045 /* MYWebViewController.m */; };
+		BCB6F57F268874BF004E8045 /* www in Resources */ = {isa = PBXBuildFile; fileRef = BCB6F57D268874BF004E8045 /* www */; };
+		BCB6F580268874BF004E8045 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = BCB6F57E268874BF004E8045 /* config.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		BCB6F55C26885FE0004E8045 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BCB6F56926886D39004E8045 /* MYWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYWebViewController.h; sourceTree = "<group>"; };
 		BCB6F56A26886D39004E8045 /* MYWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYWebViewController.m; sourceTree = "<group>"; };
+		BCB6F57D268874BF004E8045 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		BCB6F57E268874BF004E8045 /* config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = config.xml; sourceTree = "<group>"; };
 		D4509D42BEEBF118D8616631 /* libPods-cordova-project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cordova-project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -67,6 +71,8 @@
 		BCB6F53E26885FDD004E8045 = {
 			isa = PBXGroup;
 			children = (
+				BCB6F57E268874BF004E8045 /* config.xml */,
+				BCB6F57D268874BF004E8045 /* www */,
 				BCB6F54926885FDD004E8045 /* cordova-project */,
 				BCB6F54826885FDD004E8045 /* Products */,
 				22D5229B162F4B3EDD332734 /* Pods */,
@@ -157,9 +163,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCB6F57F268874BF004E8045 /* www in Resources */,
 				BCB6F55A26885FE0004E8045 /* LaunchScreen.storyboard in Resources */,
 				BCB6F55726885FE0004E8045 /* Assets.xcassets in Resources */,
 				BCB6F55526885FDD004E8045 /* Main.storyboard in Resources */,
+				BCB6F580268874BF004E8045 /* config.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

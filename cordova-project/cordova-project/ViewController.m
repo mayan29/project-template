@@ -21,6 +21,7 @@
 
 - (IBAction)onLogin:(UIButton *)sender {
     MYWebViewController *vc = [[MYWebViewController alloc] init];
+    vc.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:vc animated:YES completion:nil];
 }
 
