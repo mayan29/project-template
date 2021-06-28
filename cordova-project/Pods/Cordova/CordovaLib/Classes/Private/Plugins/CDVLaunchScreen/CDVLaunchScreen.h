@@ -17,12 +17,11 @@
  under the License.
  */
 
-#import <Foundation/Foundation.h>
+#import <Cordova/CDVPlugin.h>
 
-@protocol CDVScreenOrientationDelegate <NSObject>
+@interface CDVLaunchScreen : CDVPlugin
 
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations;
-
-- (BOOL)shouldAutorotate;
+- (void)show:(CDVInvokedUrlCommand*)command;
+- (void)hide:(CDVInvokedUrlCommand*)command;
 
 @end

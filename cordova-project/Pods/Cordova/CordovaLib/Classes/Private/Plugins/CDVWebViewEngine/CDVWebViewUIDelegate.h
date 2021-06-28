@@ -17,13 +17,16 @@
  under the License.
  */
 
-#import <Cordova/CDVPlugin.h>
-#import <Cordova/CDVWebViewEngineProtocol.h>
+#import <WebKit/WebKit.h>
 
-@interface CDVUIWebViewEngine : CDVPlugin <CDVWebViewEngineProtocol>
+@interface CDVWebViewUIDelegate : NSObject <WKUIDelegate>
+{
+    NSMutableArray<UIViewController*>* windows;
+}
 
-#if !WK_WEB_VIEW_ONLY
-@property (nonatomic, strong, readonly) id <UIWebViewDelegate> uiWebViewDelegate;
-#endif
+@property (nonatomic, copy) NSString* title;
+@property (nonatomic, assign) BOOL allowNewWindows;
+
+- (instancetype)initWithTitle:(NSString*)title;
 
 @end

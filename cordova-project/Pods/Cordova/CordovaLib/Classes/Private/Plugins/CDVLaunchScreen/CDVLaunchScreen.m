@@ -17,17 +17,23 @@
  under the License.
  */
 
-#if !WK_WEB_VIEW_ONLY
+#import "CDVLaunchScreen.h"
+#import <Cordova/CDVViewController.h>
 
-#import <UIKit/UIKit.h>
-#import "CDVUIWebViewEngine.h"
+@implementation CDVLaunchScreen
 
-@interface CDVUIWebViewNavigationDelegate : NSObject <UIWebViewDelegate>
+- (void)show:(CDVInvokedUrlCommand*)command
+{
+    if ([self.viewController isKindOfClass:[CDVViewController class]]) {
+        [(CDVViewController*)self.viewController showLaunchScreen:YES];
+    }
+}
 
-@property (nonatomic, weak) CDVPlugin* enginePlugin;
-
-- (instancetype)initWithEnginePlugin:(CDVPlugin*)enginePlugin;
+- (void)hide:(CDVInvokedUrlCommand*)command
+{
+    if ([self.viewController isKindOfClass:[CDVViewController class]]) {
+        [(CDVViewController*)self.viewController showLaunchScreen:NO];
+    }
+}
 
 @end
-
-#endif
