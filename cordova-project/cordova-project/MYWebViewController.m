@@ -17,6 +17,8 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    NSLog(@"正在使用的插件: %@", self.pluginsMap);
 }
 
 @end

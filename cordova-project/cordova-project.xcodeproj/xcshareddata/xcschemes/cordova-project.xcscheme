@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EFC12233F108D80BDEDC03C07853C137"
-               BuildableName = "libPods-cordova-project.a"
-               BlueprintName = "Pods-cordova-project"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "BCB6F54626885FDD004E8045"
+               BuildableName = "cordova-project.app"
+               BlueprintName = "cordova-project"
+               ReferencedContainer = "container:cordova-project.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -40,6 +40,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "BCB6F54626885FDD004E8045"
+            BuildableName = "cordova-project.app"
+            BlueprintName = "cordova-project"
+            ReferencedContainer = "container:cordova-project.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -47,6 +57,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "BCB6F54626885FDD004E8045"
+            BuildableName = "cordova-project.app"
+            BlueprintName = "cordova-project"
+            ReferencedContainer = "container:cordova-project.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
