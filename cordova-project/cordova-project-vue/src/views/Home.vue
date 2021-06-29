@@ -24,7 +24,6 @@ export default {
     },
     onImgClick () {
       console.log('打印 navigator.camera:', navigator.camera)
-      navigator.camera.getPicture(this.onSuccess)
       navigator.camera.getPicture(this.onSuccess, this.onFail, { 
         quality: 50, 
         destinationType: navigator.camera.DestinationType.FILE_URI 
