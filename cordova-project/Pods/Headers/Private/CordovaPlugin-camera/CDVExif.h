@@ -1,1 +1,0 @@
-../../../CordovaPlugin-camera/src/ios/CDVExif.h
