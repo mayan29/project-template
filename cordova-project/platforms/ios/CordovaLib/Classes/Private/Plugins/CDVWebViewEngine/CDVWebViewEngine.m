@@ -446,16 +446,18 @@ static void * KVOContext = &KVOContext;
 
 #pragma mark WKScriptMessageHandler implementation
 
+// 从 WKScriptMessageHandler 代理 - 从网页接收脚本消息时调用 中跳转过来
 - (void)userContentController:(WKUserContentController*)userContentController didReceiveScriptMessage:(WKScriptMessage*)message
 {
     if (![message.name isEqualToString:CDV_BRIDGE_NAME]) {
         return;
     }
 
-    CDVViewController* vc = (CDVViewController*)self.viewController;
+    CDVViewController *vc = (CDVViewController *)self.viewController;
 
-    NSArray* jsonEntry = message.body; // NSString:callbackId, NSString:service, NSString:action, NSArray:args
-    CDVInvokedUrlCommand* command = [CDVInvokedUrlCommand commandFromJson:jsonEntry];
+    NSArray *jsonEntry = message.body; // NSString:callbackId, NSString:service, NSString:action, NSArray:args
+    // 将 message.body 中的信息转换为 CDVInvokedUrlCommand 模型
+    CDVInvokedUrlCommand *command = [CDVInvokedUrlCommand commandFromJson:jsonEntry];
     CDV_EXEC_LOG(@"Exec(%@): Calling %@.%@", command.callbackId, command.className, command.methodName);
 
     if (![vc.commandQueue execute:command]) {
@@ -600,6 +602,7 @@ static void * KVOContext = &KVOContext;
     return self;
 }
 
+// WKScriptMessageHandler 代理：从网页接收脚本消息时调用
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message
 {
     [self.scriptMessageHandler userContentController:userContentController didReceiveScriptMessage:message];
