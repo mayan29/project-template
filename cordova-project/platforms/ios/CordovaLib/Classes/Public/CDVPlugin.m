@@ -109,12 +109,11 @@ NSString* const CDVViewWillTransitionToSizeNotification = @"CDVViewWillTransitio
     commandDelegate = nil;
 }
 
-- (UIView*)webView
+- (UIView *)webView
 {
     if (self.webViewEngine != nil) {
         return self.webViewEngine.engineWebView;
     }
-
     return nil;
 }
 

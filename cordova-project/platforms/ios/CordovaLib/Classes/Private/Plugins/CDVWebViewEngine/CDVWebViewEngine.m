@@ -150,9 +150,8 @@
 
 - (void)pluginInitialize
 {
-    // viewController would be available now. we attempt to set all possible delegates to it, by default
-    CDVViewController* vc = (CDVViewController*)self.viewController;
-    NSDictionary* settings = self.commandDelegate.settings;
+    CDVViewController *vc = (CDVViewController *)self.viewController;
+    NSDictionary *settings = self.commandDelegate.settings;
 
     NSString *scheme = [settings cordovaSettingForKey:@"scheme"];
 
@@ -160,14 +159,14 @@
     self.cdvIsFileScheme = [scheme isEqualToString: @"file"] || scheme == nil;
 
     NSString *hostname = @"";
-    if(!self.cdvIsFileScheme) {
-        if(scheme == nil || [WKWebView handlesURLScheme:scheme]){
+    if (!self.cdvIsFileScheme) {
+        if (scheme == nil || [WKWebView handlesURLScheme:scheme]) {
             scheme = @"app";
         }
         vc.appScheme = scheme;
 
         hostname = [settings cordovaSettingForKey:@"hostname"];
-        if(hostname == nil){
+        if (hostname == nil) {
             hostname = @"localhost";
         }
 
@@ -180,10 +179,10 @@
 
     CDVWebViewWeakScriptMessageHandler *weakScriptMessageHandler = [[CDVWebViewWeakScriptMessageHandler alloc] initWithScriptMessageHandler:self];
 
-    WKUserContentController* userContentController = [[WKUserContentController alloc] init];
+    WKUserContentController *userContentController = [[WKUserContentController alloc] init];
     [userContentController addScriptMessageHandler:weakScriptMessageHandler name:CDV_BRIDGE_NAME];
 
-    if(self.CDV_ASSETS_URL) {
+    if (self.CDV_ASSETS_URL) {
         NSString *scriptCode = [NSString stringWithFormat:@"window.CDV_ASSETS_URL = '%@';", self.CDV_ASSETS_URL];
         WKUserScript *wkScript = [[WKUserScript alloc] initWithSource:scriptCode injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:YES];
 
@@ -529,17 +528,19 @@ static void * KVOContext = &KVOContext;
     return NO;
 }
 
-- (void) webView: (WKWebView *) webView decidePolicyForNavigationAction: (WKNavigationAction*) navigationAction decisionHandler: (void (^)(WKNavigationActionPolicy)) decisionHandler
+// 决定是否允许或取消导航
+// navigationAction: 有关触发导航请求的操作的描述性信息
+// decisionHandler: 要调用以允许或取消导航的决策处理程序
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
 {
-    NSURL* url = [navigationAction.request URL];
-    CDVViewController* vc = (CDVViewController*)self.viewController;
+    NSURL *url = [navigationAction.request URL];
+    CDVViewController *vc = (CDVViewController *)self.viewController;
 
-    /*
-     * Give plugins the chance to handle the url
-     */
-    BOOL anyPluginsResponded = NO;
-    BOOL shouldAllowRequest = NO;
-
+    // 给插件处理 url 的机会
+    
+    BOOL anyPluginsResponded = NO; // 是否有插件响应
+    BOOL shouldAllowRequest = NO; // 是否允许请求
+    
     for (NSString* pluginName in vc.pluginObjects) {
         CDVPlugin* plugin = [vc.pluginObjects objectForKey:pluginName];
         SEL selector = NSSelectorFromString(@"shouldOverrideLoadWithRequest:navigationType:");

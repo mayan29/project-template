@@ -27,7 +27,7 @@
 #import "CDVPlugin.h"
 #import "CDVWebViewEngineProtocol.h"
 
-@interface CDVViewController : UIViewController <CDVScreenOrientationDelegate>{
+@interface CDVViewController : UIViewController <CDVScreenOrientationDelegate> {
     @protected
     id <CDVWebViewEngineProtocol> _webViewEngine;
     @protected

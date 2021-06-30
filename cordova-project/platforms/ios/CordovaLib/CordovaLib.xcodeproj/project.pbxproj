@@ -253,11 +253,11 @@
 		7ED95CF11AB9028C008C4574 /* Private */ = {
 			isa = PBXGroup;
 			children = (
-				AA747D9E0F9514B9006C5449 /* CordovaLib_Prefix.pch */,
 				7ED95CF21AB9028C008C4574 /* CDVDebug.h */,
 				7ED95CF31AB9028C008C4574 /* CDVJSON_private.h */,
 				7ED95CF41AB9028C008C4574 /* CDVJSON_private.m */,
 				7ED95CF51AB9028C008C4574 /* CDVPlugin+Private.h */,
+				AA747D9E0F9514B9006C5449 /* CordovaLib_Prefix.pch */,
 				7ED95CF61AB9028C008C4574 /* Plugins */,
 			);
 			name = Private;
@@ -267,12 +267,12 @@
 		7ED95CF61AB9028C008C4574 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				4E714D3123F5356700A321AF /* CDVLaunchScreen */,
-				4E23F8F423E16D30006CD852 /* CDVWebViewEngine */,
-				28BFF9111F355A1D00DDF01A /* CDVLogger */,
 				A3B082D11BB15CEA00D8DC35 /* CDVGestureHandler */,
-				3093E2201B16D6A3003F381A /* CDVIntentAndNavigationFilter */,
 				7ED95CF71AB9028C008C4574 /* CDVHandleOpenURL */,
+				3093E2201B16D6A3003F381A /* CDVIntentAndNavigationFilter */,
+				4E714D3123F5356700A321AF /* CDVLaunchScreen */,
+				28BFF9111F355A1D00DDF01A /* CDVLogger */,
+				4E23F8F423E16D30006CD852 /* CDVWebViewEngine */,
 			);
 			path = Plugins;
 			sourceTree = "<group>";
@@ -303,28 +303,28 @@
 				7ED95D1A1AB9029B008C4574 /* CDVConfigParser.m */,
 				7ED95D1B1AB9029B008C4574 /* CDVInvokedUrlCommand.h */,
 				7ED95D1C1AB9029B008C4574 /* CDVInvokedUrlCommand.m */,
-				7ED95D1D1AB9029B008C4574 /* CDVPlugin+Resources.h */,
-				7ED95D1E1AB9029B008C4574 /* CDVPlugin+Resources.m */,
 				7ED95D1F1AB9029B008C4574 /* CDVPlugin.h */,
 				7ED95D201AB9029B008C4574 /* CDVPlugin.m */,
+				7ED95D1D1AB9029B008C4574 /* CDVPlugin+Resources.h */,
+				7ED95D1E1AB9029B008C4574 /* CDVPlugin+Resources.m */,
 				7ED95D211AB9029B008C4574 /* CDVPluginResult.h */,
 				7ED95D221AB9029B008C4574 /* CDVPluginResult.m */,
 				7ED95D231AB9029B008C4574 /* CDVScreenOrientationDelegate.h */,
 				7ED95D241AB9029B008C4574 /* CDVTimer.h */,
 				7ED95D251AB9029B008C4574 /* CDVTimer.m */,
+				2F4D42BA23F218BA00501999 /* CDVURLSchemeHandler.h */,
+				2F4D42BB23F218BA00501999 /* CDVURLSchemeHandler.m */,
 				7ED95D2A1AB9029B008C4574 /* CDVViewController.h */,
-				4E23F8F923E16E96006CD852 /* CDVWebViewProcessPoolFactory.h */,
-				4E23F8F523E16E96006CD852 /* CDVWebViewProcessPoolFactory.m */,
 				7ED95D2B1AB9029B008C4574 /* CDVViewController.m */,
 				7ED95D2C1AB9029B008C4574 /* CDVWebViewEngineProtocol.h */,
+				4E23F8F923E16E96006CD852 /* CDVWebViewProcessPoolFactory.h */,
+				4E23F8F523E16E96006CD852 /* CDVWebViewProcessPoolFactory.m */,
 				7ED95D2D1AB9029B008C4574 /* CDVWhitelist.h */,
 				7ED95D2E1AB9029B008C4574 /* CDVWhitelist.m */,
 				7ED95D311AB9029B008C4574 /* NSDictionary+CordovaPreferences.h */,
 				7ED95D321AB9029B008C4574 /* NSDictionary+CordovaPreferences.m */,
 				7ED95D331AB9029B008C4574 /* NSMutableArray+QueueAdditions.h */,
 				7ED95D341AB9029B008C4574 /* NSMutableArray+QueueAdditions.m */,
-				2F4D42BA23F218BA00501999 /* CDVURLSchemeHandler.h */,
-				2F4D42BB23F218BA00501999 /* CDVURLSchemeHandler.m */,
 			);
 			name = Public;
 			path = Classes/Public;

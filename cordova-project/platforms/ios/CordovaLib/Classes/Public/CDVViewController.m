@@ -70,7 +70,7 @@
                                                      name:UIApplicationWillEnterForegroundNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onAppDidEnterBackground:)
                                                      name:UIApplicationDidEnterBackgroundNotification object:nil];
-
+        // webView 加载完成后发起的通知
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onWebViewPageDidLoad:)
                                                      name:CDVPageDidLoadNotification object:nil];
 
@@ -759,10 +759,7 @@
     [self.commandDelegate evalJs:@"cordova.fireDocumentEvent('pause', null, true);" scheduledOnRunLoop:NO];
 }
 
-/**
- Show the webview and fade out the intermediary view
- This is to prevent the flashing of the mainViewController
- */
+// 显示 webView 并且淡出中间视图，目的是防止 mainViewController 闪烁
 - (void)onWebViewPageDidLoad:(NSNotification*)notification
 {
     self.webView.hidden = NO;
