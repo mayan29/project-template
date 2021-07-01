@@ -148,6 +148,7 @@
     return configuration;
 }
 
+// 插件初始化
 - (void)pluginInitialize
 {
     CDVViewController *vc = (CDVViewController *)self.viewController;
@@ -178,7 +179,8 @@
     self.uiDelegate = uiDelegate;
 
     CDVWebViewWeakScriptMessageHandler *weakScriptMessageHandler = [[CDVWebViewWeakScriptMessageHandler alloc] initWithScriptMessageHandler:self];
-
+    
+    // 向 web 中添加名为 cordova 的 messageHandler
     WKUserContentController *userContentController = [[WKUserContentController alloc] init];
     [userContentController addScriptMessageHandler:weakScriptMessageHandler name:CDV_BRIDGE_NAME];
 
@@ -191,17 +193,17 @@
         }
     }
 
-    WKWebViewConfiguration* configuration = [self createConfigurationFromSettings:settings];
+    WKWebViewConfiguration *configuration = [self createConfigurationFromSettings:settings];
     configuration.userContentController = userContentController;
 
     // Do not configure the scheme handler if the scheme is default (file)
-    if(!self.cdvIsFileScheme) {
+    if (!self.cdvIsFileScheme) {
         self.schemeHandler = [[CDVURLSchemeHandler alloc] initWithVC:vc];
         [configuration setURLSchemeHandler:self.schemeHandler forURLScheme:scheme];
     }
 
     // re-create WKWebView, since we need to update configuration
-    WKWebView* wkWebView = [[WKWebView alloc] initWithFrame:self.engineWebView.frame configuration:configuration];
+    WKWebView *wkWebView = [[WKWebView alloc] initWithFrame:self.engineWebView.frame configuration:configuration];
     wkWebView.UIDelegate = self.uiDelegate;
 
     /*
